@@ -8,7 +8,7 @@ const createUser = (req, res) => {
   const user = new User({ username, password });
 
   user
-    .create()
+    .save()
     .then(res => {
       res.status(201).json(user);
     })
